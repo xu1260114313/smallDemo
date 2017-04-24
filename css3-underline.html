@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#underline{
+				width: 200px;
+				height: 50px;
+				background: #ccc;
+				margin: 20px;
+				position: relative;
+				box-sizing: border-box;
+			}
+			#underline:after{
+				content: '';
+				width: 0%;
+				height: 3px;
+				background: blue;
+				position: absolute;
+				top: -webkit-calc(100% - 3px);
+				top: -moz-calc(100% - 3px);
+				top: calc(100% - 3px);
+				left: 50%;
+				transition: .6s;
+			}
+			#underline:hover:after{
+				left: 5%;
+				width: 90%;
+				/*width值 = (50% - left值)*2;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div id="underline"></div>
+	</body>
+</html>
